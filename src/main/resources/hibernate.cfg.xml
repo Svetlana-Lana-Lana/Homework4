@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLiteDialect</property>
+
+        <property name="connection.url">jdbc:sqlite:home.db</property>
+        <mapping class="org.example.homework.CourierInfoEntity"/>
+        <mapping class="org.example.homework.CustomersEntity"/>
+        <mapping class="org.example.homework.DeliveryEntity"/>
+        <mapping class="org.example.homework.OrdersEntity"/>
+        <mapping class="org.example.homework.OrdersProductsEntity"/>
+        <mapping class="org.example.homework.ProductsEntity"/>
+
+<!--        <property name="connection.url">jdbc:sqlite:org.max.demo.db</property>-->
+<!--        <mapping class="org.max.org.max.demo.EmployeeEntity"/>-->
+<!--        <mapping class="org.max.org.max.demo.EmployeeInfoEntity"/>-->
+
+<!--        <property name="connection.url">jdbc:sqlite:seminar.db</property>-->
+<!--        <mapping class="org.example.homework.ClientEntity"/>-->
+<!--        <mapping class="org.example.homework.CreditEntity"/>-->
+<!--        <mapping class="org.example.homework.CurrentEntity"/>-->
+<!--        <mapping class="org.example.homework.DebitEntity"/>-->
+<!--        <mapping class="org.example.homework.EmployeeEntity"/>-->
+
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
